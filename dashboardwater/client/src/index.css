@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+:root {
+  /* Minimal Skeuomorphic Palette */
+  --bg: #f0f2f5;
+  --white: #ffffff;
+  --shadow-light: #ffffff;
+  --shadow-dark: #d1d9e6;
+  --primary: #4a90e2;
+  --text: #4a5568;
+  --text-dim: #94a3b8;
+  
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+@theme {
+  --color-primary: #4a90e2;
+  --color-bg: #f0f2f5;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Minimal Neumorphic Styles */
+.skeuo-flat {
+  background: var(--bg);
+  box-shadow: 10px 10px 20px var(--shadow-dark), -10px -10px 20px var(--shadow-light);
+  border-radius: 30px;
+}
+
+.skeuo-pressed {
+  background: var(--bg);
+  box-shadow: inset 8px 8px 16px var(--shadow-dark), inset -8px -8px 16px var(--shadow-light);
+  border-radius: 30px;
+}
+
+.skeuo-button {
+  background: var(--bg);
+  box-shadow: 6px 6px 12px var(--shadow-dark), -6px -6px 12px var(--shadow-light);
+  transition: all 0.2s ease;
+  border-radius: 20px;
+}
+
+.skeuo-button:active {
+  box-shadow: inset 4px 4px 8px var(--shadow-dark), inset -4px -4px 8px var(--shadow-light);
+  transform: scale(0.98);
+}
+
+.skeuo-icon {
+  background: var(--bg);
+  box-shadow: 4px 4px 8px var(--shadow-dark), -4px -4px 8px var(--shadow-light);
+  border-radius: 12px;
+}
+
+/* Progress / Tank Bars */
+.skeuo-track {
+  background: var(--bg);
+  box-shadow: inset 4px 4px 8px var(--shadow-dark), inset -4px -4px 8px var(--shadow-light);
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.skeuo-fill {
+  background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+  box-shadow: 0 0 10px rgba(74, 144, 226, 0.3);
+  border-radius: 50px;
+}
+
+/* Custom Scrollbar for Minimal Look */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--shadow-dark);
+  border-radius: 10px;
+}
